@@ -8,7 +8,6 @@ public class SmartFleetApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SmartFleetApplication.class, args);
-		System.out.println("Hello WOrld");
 	}
 
 }
