@@ -8,8 +8,7 @@ public class DashboardController {
 	
 	@GetMapping("index")
 	public String index() {
-//		return "dashboard/_layout";
-		return "index";
+		return "dashboard/_layout";
 	}
 
 }
