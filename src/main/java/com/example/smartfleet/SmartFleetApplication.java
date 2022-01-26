@@ -1,4 +1,4 @@
-package com.example.smartfleet.smartfleet;
+package com.example.smartfleet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

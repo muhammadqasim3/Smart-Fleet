@@ -1,4 +1,4 @@
-package com.example.smartfleet.smartfleet;
+package com.example.smartfleet;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
