@@ -2,9 +2,9 @@ package com.example.smartfleet.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.example.smartfleet.models.Contact;
+import com.example.smartfleet.models.Country;
 
 @Repository
-public interface CountryRepository extends JpaRepository<Contact, Integer> {
+public interface CountryRepository extends JpaRepository<Country, Integer> {
 
 }
