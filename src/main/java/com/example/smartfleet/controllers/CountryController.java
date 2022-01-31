@@ -1,6 +1,7 @@
 package com.example.smartfleet.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,5 +29,11 @@ public class CountryController {
 		countryService.save(country);
 		return "redirect:/countries";
 	}
+	
+	@GetMapping("/countries/findById")
+	public Optional<Country> findById(Integer id){		
+		return countryService.findById(id);
+	}
+	
 		
 }

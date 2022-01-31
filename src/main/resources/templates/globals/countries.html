@@ -28,9 +28,9 @@
 					<td th:text="${country.code}"></td>
 					<td>
 						<div class="btn-group">
-							<a th:href="@{/countries/findById/(id=${country.id})}" class="btn btn-primary" id="editButton"><i class="icon_pencil-edit"></i></a> 
-								<a class="btn btn-success" id="detailsButton"><i class="icon_document_alt"></i></a> 
-								<a th:href="@{/countries/delete/(id=${country.id})}" class="btn btn-danger" id="deleteButton"><i class="icon_close_alt2"></i></a>
+							<a class="btn btn-success btn-sm" id="detailsButton"><i class="fa fa-eye"></i></a>
+							<a th:href="@{/countries/edit/(id=${country.id})}" class="btn btn-primary btn-sm" id="editButton"><i class="fa fa-edit"></i></a>
+							<a th:href="@{/countries/delete/(id=${country.id})}" class="btn btn-danger btn-sm" id="deleteButton"><i class="fa fa-trash"></i></a>
 						</div>
 					</td>
 				</tr>
@@ -91,6 +91,46 @@
 		  </div>
 		</div>
 		<!-- Add Country Modal End -->
+
+		<!-- Edit Country Modal -->		
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+		 <form th:action="@{/countries/update}" method="put"> 
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="editModalLabel">Edit Country Data</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		
+		          <div class="form-group">
+		            <label for="idEdit" class="col-form-label">Id:</label>
+		            <input type="text" class="form-control" id="idEdit" name="id" readonly>
+		          </div>
+		
+		          <div class="form-group">
+		            <label for="descriptionEdit" class="col-form-label">Description:</label>
+		            <input type="text" class="form-control" id="descriptionEdit" name="description">
+		          </div>
+		          
+		          <div class="form-group">
+		            <label for="codeEdit" class="col-form-label">Code:</label>
+		            <input type="text" class="form-control" id="codeEdit" name="code">
+		          </div>  
+		      
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="submit" class="btn btn-primary">Save</button>
+		      </div>
+		    </div>
+		  </div>
+		</form>
+		</div>
+		<!-- Modal End -->
+		
 		
 	</div>
 </body>
