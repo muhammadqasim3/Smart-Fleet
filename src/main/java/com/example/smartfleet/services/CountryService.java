@@ -28,6 +28,7 @@ public class CountryService {
 
 
 	public Optional<Country> findById(Integer id) {
+		System.out.println("HELLLLo  = "+ countryRepository.findById(id));
 		return countryRepository.findById(id);
 	}
 

@@ -30,10 +30,11 @@ public class CountryController {
 		return "redirect:/countries";
 	}
 	
-	@GetMapping("/countries/findById")
+	@GetMapping("/countries/edit")
 	public Optional<Country> findById(Integer id){		
 		return countryService.findById(id);
 	}
+	
 	
 		
 }
