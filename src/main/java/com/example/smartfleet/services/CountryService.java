@@ -31,5 +31,9 @@ public class CountryService {
 		System.out.println("HELLLLo  = "+ countryRepository.findById(id));
 		return countryRepository.findById(id);
 	}
+	
+	public void delete(Integer id) {
+		countryRepository.deleteById(id);
+	}
 
 }

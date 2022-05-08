@@ -4,11 +4,14 @@ $('document').ready(function(){
 		$('#editModal').modal();
 	});
 	
-	$('.table #deleteButton').on('click',function(event) {
-		event.preventDefault();
+	
+	
+	$('table #deleteButton').on('click', function(event){
+		//event.preventDefault();
+		
 		var href = $(this).attr('href');
-		$('#deleteModal #delRef').attr('href', href);
-		$('#deleteModal').modal();		
-	});	
+		$('#confirmDeleteButton').attr('href', href); // assign href to popup modal yes option
+		$('#deleteModal').modal();
+	})
 	
 });
